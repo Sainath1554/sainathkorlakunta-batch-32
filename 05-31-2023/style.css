@@ -1,0 +1,12 @@
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+div {
+  width: 50%;
+  margin: 0 auto;
+}
