@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script>
+      let environment = "dev";
+      let amount = 100;
+      let sendingAmount;
+      switch (environment) {
+        case "dev":
+          sendingAmount = (amount * 110) / 100;
+          break;
+        case "test":
+          sendingAmount = (amount * 120) / 100;
+          break;
+        case "stage":
+          sendingAmount = (amount * 130) / 100;
+          break;
+        case "prod":
+          sendingAmount = (amount * 105) / 100;
+          break;
+        default:
+          sendingAmount = (amount * 110) / 100;
+      }
+      console.log(sendingAmount);
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html>
