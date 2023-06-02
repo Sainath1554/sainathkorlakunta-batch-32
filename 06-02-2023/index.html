@@ -33,9 +33,10 @@
     }
     function deleteHobby() {
       hobby = prompt("Enter the hobby to be deleted");
-      hobbies.pop(
-        hobbies.findIndex((value) => value.toLowerCase() == hobby.toLowerCase())
+      let index = hobbies.findIndex(
+        (value) => value.toLowerCase() == hobby.toLowerCase()
       );
+      hobbies.splice(index, 1);
       console.log(hobbies);
     }
   </script>
