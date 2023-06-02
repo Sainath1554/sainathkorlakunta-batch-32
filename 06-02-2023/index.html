@@ -1,24 +1,42 @@
 <head>
+  <title>Hobbies</title>
+</head>
+<body>
+  <p>Hobbies are:</p>
+  <ul id="hobbies"></ul>
+  <button id="addHobby" onclick="addHobby()">Add Hobby</button>
+  <button id="deleteHobby" onclick="deleteHobby()">Delete Hobby</button>
   <script>
     let hobbies = [
       "playing cricket",
       "playing badminton",
       "playing table tennis",
     ];
+    let ul = document.getElementById("hobbies");
+    let nodes = hobbies.map((hobby) => {
+      let li = document.createElement("li");
+      li.textContent = hobby;
+      return li;
+    });
+    ul.append(...nodes);
     function getHobbies() {
       console.log(hobbies);
     }
     getHobbies();
     function addHobby(hobby) {
+      hobby = prompt("Enter the hobby to be added");
       hobbies.push(hobby);
+      console.log(hobbies);
+      let li = document.createElement("li");
+      li.textContent = hobby;
+      ul.append(li);
     }
-    function deleteHobby(hobby) {
+    function deleteHobby() {
+      hobby = prompt("Enter the hobby to be deleted");
       hobbies.pop(
         hobbies.findIndex((value) => value.toLowerCase() == hobby.toLowerCase())
       );
+      console.log(hobbies);
     }
   </script>
-</head>
-<body>
-  <p>Hobbies are:</p>
 </body>
