@@ -11,14 +11,14 @@
         case "test":
           sendingAmount = (amount * 120) / 100;
           break;
-        case "stage":
-          sendingAmount = (amount * 130) / 100;
-          break;
-        case "prod":
-          sendingAmount = (amount * 105) / 100;
-          break;
         default:
-          sendingAmount = (amount * 110) / 100;
+          if (environment == "stage") {
+            sendingAmount = (amount * 130) / 100;
+          } else if (environment == "prod") {
+            sendingAmount = (amount * 105) / 100;
+          } else {
+            sendingAmount = (amount * 110) / 100;
+          }
       }
       console.log(sendingAmount);
     </script>
