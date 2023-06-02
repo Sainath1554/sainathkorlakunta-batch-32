@@ -1,8 +1,8 @@
 <html>
   <head>
     <script>
-      let environment = "dev";
-      let amount = 100;
+      let amount = prompt("Enter amount");
+      let environment = prompt("Enter environment").toLowerCase();
       let sendingAmount;
       switch (environment) {
         case "dev":
@@ -23,7 +23,5 @@
       console.log(sendingAmount);
     </script>
   </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
+  <body></body>
 </html>
