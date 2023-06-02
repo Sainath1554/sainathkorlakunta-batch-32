@@ -1,0 +1,24 @@
+<head>
+  <script>
+    let hobbies = [
+      "playing cricket",
+      "playing badminton",
+      "playing table tennis",
+    ];
+    function getHobbies() {
+      console.log(hobbies);
+    }
+    getHobbies();
+    function addHobby(hobby) {
+      hobbies.push(hobby);
+    }
+    function deleteHobby(hobby) {
+      hobbies.pop(
+        hobbies.findIndex((value) => value.toLowerCase() == hobby.toLowerCase())
+      );
+    }
+  </script>
+</head>
+<body>
+  <p>Hobbies are:</p>
+</body>
