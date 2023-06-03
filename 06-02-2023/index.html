@@ -13,12 +13,12 @@
       "playing table tennis",
     ];
     let ul = document.getElementById("hobbies");
-    let nodes = hobbies.map((hobby) => {
+    hobbies.forEach((hobby) => {
       let li = document.createElement("li");
       li.textContent = hobby;
-      return li;
+      li.setAttribute("id", hobby);
+      ul.appendChild(li);
     });
-    ul.append(...nodes);
     function getHobbies() {
       console.log(hobbies);
     }
@@ -29,7 +29,8 @@
       console.log(hobbies);
       let li = document.createElement("li");
       li.textContent = hobby;
-      ul.append(li);
+      li.setAttribute("id", hobby);
+      ul.appendChild(li);
     }
     function deleteHobby() {
       hobby = prompt("Enter the hobby to be deleted");
@@ -38,6 +39,8 @@
       );
       hobbies.splice(index, 1);
       console.log(hobbies);
+      let item = document.getElementById(hobby);
+      ul.removeChild(item);
     }
   </script>
 </body>
