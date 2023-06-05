@@ -38,9 +38,7 @@
       //     (value) => value.toLowerCase() == hobby.toLowerCase()
       //   );
       //   hobbies.splice(index, 1);
-      hobbies = hobbies.filter((h) => {
-        return h.toLowerCase() != hobby.toLowerCase();
-      });
+      hobbies = hobbies.filter((h) => h.toLowerCase() != hobby.toLowerCase());
       console.log(hobbies);
       let item = document.getElementById(hobby);
       ul.removeChild(item);
