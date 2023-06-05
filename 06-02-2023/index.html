@@ -34,10 +34,13 @@
     }
     function deleteHobby() {
       hobby = prompt("Enter the hobby to be deleted");
-      let index = hobbies.findIndex(
-        (value) => value.toLowerCase() == hobby.toLowerCase()
-      );
-      hobbies.splice(index, 1);
+      //   let index = hobbies.findIndex(
+      //     (value) => value.toLowerCase() == hobby.toLowerCase()
+      //   );
+      //   hobbies.splice(index, 1);
+      hobbies = hobbies.filter((h) => {
+        return h.toLowerCase() != hobby.toLowerCase();
+      });
       console.log(hobbies);
       let item = document.getElementById(hobby);
       ul.removeChild(item);
