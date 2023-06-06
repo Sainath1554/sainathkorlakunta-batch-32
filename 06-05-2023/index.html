@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("myForm");
+        const details = document.getElementById("details");
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          console.log("button clicked");
+          while (details.firstChild) {
+            details.removeChild(details.firstChild);
+          }
+          const name = document.createElement("p");
+          name.innerText =
+            document.getElementById("firstName").value +
+            " " +
+            document.getElementById("lastName").value;
+          details.appendChild(name);
+          const dob = document.createElement("p");
+          dob.innerText = document.getElementById("dateOfBirth").value;
+          details.appendChild(dob);
+          const email = document.createElement("p");
+          email.innerText = document.getElementById("email").value;
+          details.appendChild(email);
+          const phNumber = document.createElement("p");
+          phNumber.innerText = document.getElementById("phNumber").value;
+          details.appendChild(phNumber);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="details"></div>
+    <form id="myForm">
+      <div>
+        <label for="firstName">FirstName :</label>
+        <input type="text" name="firstName" id="firstName" />
+      </div>
+      <div>
+        <label for="lastName">LastName :</label>
+        <input type="text" name="lastName" id="lastName" />
+      </div>
+      <div>
+        <label for="dateOfBirth">Date of Birth :</label>
+        <input type="date" name="dateOfBirth" id="dateOfBirth" />
+      </div>
+      <div>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="phNumber">Phone Number :</label>
+        <input type="number" name="phNumber" id="phNumber" />
+      </div>
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
+    </form>
+  </body>
+</html>
