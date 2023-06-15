@@ -1,3 +1,23 @@
 button {
   margin-right: 30px;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header {
+  background-color: blue;
+}
+input {
+  background-color: inherit;
+  border-color: black;
+  color: white;
+}
+
+.main {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
