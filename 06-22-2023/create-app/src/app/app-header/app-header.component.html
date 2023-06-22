@@ -1,0 +1,14 @@
+<div>
+  <ul class="header">
+    <li [routerLink]="['/login']" routerLinkActive="router-link-active">
+      Login
+    </li>
+    <li [routerLink]="['/profile']" routerLinkActive="router-link-active">
+      profile
+    </li>
+    <li *ngIf="flag" (click)="(onLogOut)">Logout</li>
+    <!-- <li [routerLink]="['/signup']" routerLinkActive="router-link-active">
+      Signup
+    </li> -->
+  </ul>
+</div>
